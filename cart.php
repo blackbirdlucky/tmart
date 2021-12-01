@@ -161,7 +161,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
                                 <?php
                                 $id_user = $_GET['id_user'];
-                                $sql = "SELECT cart.id_cart, auto.cover_auto, auto.title_auto, auto.newprice_auto 
+                                $sql = "SELECT cart.id_cart, auto.cover_auto, auto.slider1_auto, auto.title_auto, auto.newprice_auto 
                                             FROM auto
                                             JOIN cart 
                                             ON cart.id_auto = auto.id_auto
@@ -169,7 +169,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 $result_select = mysqli_query($on_link, $sql);
                                 while ($obj = mysqli_fetch_object($result_select)) { ?>
                                     <tr>
-                                        <td class="product-thumbnail"><a href="#"><img src="<?php echo $obj->cover_auto ?>" alt="product img"/></a></td>
+                                        <td class="product-thumbnail"><a href="#"><img src="admin/images/<?php echo $obj->cover_auto ?>" alt="product img"/></a></td>
                                         <td class="product-name"><a href="#"><?php echo $obj->title_auto ?></a></td>
                                         <td class="product-price"><span class="amount"><?php echo $obj->newprice_auto ?></span></td>
                                         <td class="product-remove">

@@ -152,7 +152,7 @@ session_start();
                                 <div class="portfolio-img">
 
                                     <a href="">
-                                        <img src="<?php echo $obj->cover_auto ?>" alt="" />
+                                        <img src="admin/images/<?php echo $obj->cover_auto ?>" alt="" />
                                     </a>
 
                                     <div class="portfolio-icon">

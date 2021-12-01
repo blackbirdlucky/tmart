@@ -180,7 +180,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 <div class="product__inner">
                                     <div class="pro__thumb">
                                         <a href="#">
-                                            <img src="<?php echo $obj->cover_auto ?>" alt="product images">
+                                            <img src="admin/images/<?php echo $obj->cover_auto ?>" alt="product images">
                                         </a>
                                     </div>
 
@@ -212,15 +212,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     </div>
                 </div>
 
-                <!-- Start Load More BTn -->
-                <div class="row mt--60">
-                    <div class="col-md-12">
-                        <div class="htc__loadmore__btn">
-                            <a href="#">Загрузить еще</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Load More BTn -->
+
 
             </div>
         </div>
@@ -254,7 +246,7 @@ while ($obj = mysqli_fetch_object($result_select)) { ?>
                             <!-- Start product images -->
                             <div class="product-images">
                                 <div class="main-image images">
-                                    <img alt="big images" src="<?php echo $obj->cover_auto ?>">
+                                    <img alt="big images" src="admin/images/<?php echo $obj->slider1_auto ?>">
                                 </div>
                             </div>
                             <!-- end product images -->

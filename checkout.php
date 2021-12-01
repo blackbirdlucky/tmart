@@ -132,55 +132,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                     <div class="single-checkout-box">
                                         <textarea name="message" placeholder="Предпочтения"></textarea>
                                     </div>
-                                    <div class="single-checkout-box select-option mt--40">
-                                        <select>
-                                            <option>Страна</option>
-                                            <option>...</option>
-                                            <option>...</option>
-                                            <option>...</option>
-                                        </select>
-                                        <input type="text" placeholder="Адрес">
-                                    </div>
-                                    <div class="single-checkout-box">
+
+                                    <div class="single-checkout-box" style="padding-top: 25px">
                                         <input type="email" placeholder="Город">
-                                        <input type="text" placeholder="Удобное время доставки">
+                                        <input type="text" placeholder="Адрес">
                                     </div>
 
                                 </div>
                             </div>
                             <!-- End Checkbox Area -->
 
-                            <!-- Start Payment Box -->
-                            <div class="payment-form">
-                                <h2 class="section-title-3">Реквизиты</h2>
-                                <p>Предоплата для оформления заказа</p>
-                                <div class="payment-form-inner">
-                                    <div class="single-checkout-box">
-                                        <input type="text" placeholder="Держатель">
-                                        <input type="text" placeholder="Номер карты">
-                                    </div>
-                                    <div class="single-checkout-box select-option">
-                                        <input type="text" placeholder="Срок действия">
-                                        <input type="text" placeholder="CVC">
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Payment Box -->
+
 
                             <!-- Start Payment Way -->
-                            <div class="our-payment-sestem">
-                                <h2 class="section-title-3">Мы принимаем :</h2>
-                                <ul class="payment-menu">
-                                    <li><a><img src="images/payment/1.jpg" alt="payment-img"></a></li>
-                                    <li><a><img src="images/payment/2.jpg" alt="payment-img"></a></li>
-                                    <li><a><img src="images/payment/3.jpg" alt="payment-img"></a></li>
-                                    <li><a><img src="images/payment/4.jpg" alt="payment-img"></a></li>
-                                    <li><a><img src="images/payment/5.jpg" alt="payment-img"></a></li>
-                                </ul>
                                 <div class="checkout-btn">
                                     <a class="ts-btn btn-light btn-large hover-theme" href="#">Подтвердить и оставить заявку</a>
-                                </div>    
-                            </div>
+                                </div>
                             <!-- End Payment Way -->
                         </div>
                     </div>

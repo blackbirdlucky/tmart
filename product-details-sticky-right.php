@@ -156,15 +156,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             <div class="product__details__container product-details-5">
 
                                 <div class="scroll-single-product mb--30">
-                                    <img src="<?php echo $obj->slider1_auto ?>" alt="full-image">
+                                    <img src="admin/images/<?php echo $obj->slider1_auto ?>" alt="full-image">
                                 </div>
 
                                 <div class="scroll-single-product mb--30">
-                                    <img src="<?php echo $obj->slider2_auto ?>" alt="full-image">
+                                    <img src="admin/images/<?php echo $obj->slider2_auto ?>" alt="full-image">
                                 </div>
 
                                 <div class="scroll-single-product mb--30">
-                                    <img src="<?php echo $obj->slider3_auto ?>" alt="full-image">
+                                    <img src="admin/images/<?php echo $obj->slider3_auto ?>" alt="full-image">
                                 </div>
 
                             </div>

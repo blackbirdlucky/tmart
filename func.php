@@ -14,7 +14,8 @@ if (isset($_POST['submit'])) {
 	$sql = ("INSERT INTO `cart`(`id_user`, `id_auto`) VALUES(?,?)");
 	$query = $pdo->prepare($sql);
 	$query->execute([ $id_user, $id_auto]);
-	$success = '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    header('Location: '. $_SERVER['HTTP_REFERER']);
+    $success_buy = '<div class="alert alert-success alert-dismissible fade show" role="alert">
   <strong>Данные успешно отправлены!</strong> Вы можете закрыть это сообщение.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
