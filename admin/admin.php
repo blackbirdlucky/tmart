@@ -1,6 +1,7 @@
 <?php
 require_once 'func_users.php';
 require_once 'func_auto.php';
+require_once 'func_order.php';
 ?>
 
 <?php
@@ -55,21 +56,6 @@ error_reporting(E_ERROR | E_PARSE);
             <div class="letter">N</div>
             <div class="letter">G</div>
         </div>
-
-        <div class="preloader-box">
-            <div class="letter">С</div>
-            <div class="letter">Ы</div>
-            <div class="letter">Р</div>
-        </div>
-
-        <div class="preloader-box">
-            <div class="letter">С</div>
-            <div class="letter">О</div>
-            <div class="letter">Б</div>
-            <div class="letter">А</div>
-            <div class="letter">К</div>
-            <div class="letter">И</div>
-        </div>
     </div>
 </div>
 <!-- Preloader End -->
@@ -79,7 +65,6 @@ error_reporting(E_ERROR | E_PARSE);
 
         <div class="col-lg-12 contentColumn" id="tabContainer">
 
-
             <header class="header clearfix">
                 <nav class="mainMenu">
                     <ul class="clearfix" id="mainTab">
@@ -88,7 +73,15 @@ error_reporting(E_ERROR | E_PARSE);
                         <li><a href="#blog"><i class="icon icon-ClipboardText"></i><span>Заявки</span></a></li>
                     </ul>
                 </nav>
+
+                <nav class="mainMenu">
+                    <ul class="clearfix">
+                        <li><a href="../index.php"><i class="icon icon-Restart"></i><span>Выход</span></a></li>
+                    </ul>
+                </nav>
+
             </header>
+
 
             <div class="sidebarOverlay"></div>
 
@@ -153,7 +146,7 @@ error_reporting(E_ERROR | E_PARSE);
                         <div class="row">
                             <div class="col-lg-12 text-center">
                                 <div class="copyRight">&copy; 2021 All Rights Reserved <a
-                                            href="../index.php" target="_blank">Главная</a></div>
+                                            href="#" target="_blank">TMART</a></div>
                             </div>
                         </div>
                     </div>
@@ -244,7 +237,7 @@ error_reporting(E_ERROR | E_PARSE);
                             <div class="row">
                                 <div class="col-lg-12 text-center">
                                     <div class="copyRight">&copy; 2021 All Rights Reserved <a
-                                                href="../index.php" target="_blank">Главная</a></div>
+                                                href="#" target="_blank">TMART</a></div>
                                 </div>
                             </div>
                         </div>
@@ -266,9 +259,58 @@ error_reporting(E_ERROR | E_PARSE);
                             </div>
 
 
-                            <div class="col-lg-12">
-                                <div class="row">
-                                    Контент
+                            <div class="row">
+                                <div class="col mt-1">
+
+                                    <table class="table shadow text-light ">
+                                        <thead class="thead-dark">
+                                        <tr>
+
+                                            <th>#</th>
+                                            <th>Имя</th>
+                                            <th>Фамилия</th>
+                                            <th>Почта</th>
+                                            <th>Телефон</th>
+                                            <th>Описание</th>
+                                            <th>Город</th>
+                                            <th>Адрес</th>
+                                            <th colspan="2">Действие</th>
+                                            <th></th>
+                                        </tr>
+                                        <?php foreach ($result_order as $value) { ?>
+                                            <tr>
+                                                <td><?= $value['id_order'] ?></td>
+                                                <td><?= $value['name_order'] ?></td>
+                                                <td><?= $value['fam_order'] ?></td>
+                                                <td><?= $value['mail_order'] ?></td>
+                                                <td><?= $value['phone_order'] ?></td>
+                                                <td><?= $value['desc_order'] ?></td>
+                                                <td><?= $value['city_order'] ?></td>
+                                                <td><?= $value['address_order'] ?></td>
+
+                                                <td>
+                                                    <a href="?edit=<?= $value['id_order'] ?>"
+                                                       class="btn btn-success btn-sm"
+                                                       data-toggle="modal"
+                                                       data-target="#editModal-order<?= $value['id_order'] ?>"><i
+                                                                class="fa icofont-exchange"></i></a>
+                                                </td>
+
+                                                <td>
+                                                    <a href="?delete=<?= $value['id_order'] ?>"
+                                                       class="btn btn-danger btn-sm"
+                                                       data-toggle="modal"
+                                                       data-target="#deleteModal-order<?= $value['id_order'] ?>"><i
+                                                                class="fa icofont-bomb"></i></a>
+                                                    <?php require 'modal_order.php'; ?>
+                                                </td>
+                                            </tr> <?php } ?>
+                                        </thead>
+                                    </table>
+                                    <?= $success_order ?>
+                                    <button class="btn btn-success mb-1" data-toggle="modal"
+                                            data-target="#Modal-order">Добавить
+                                    </button>
                                 </div>
                             </div>
 
@@ -282,7 +324,7 @@ error_reporting(E_ERROR | E_PARSE);
                             <div class="row">
                                 <div class="col-lg-12 text-center">
                                     <div class="copyRight">&copy; 2021 All Rights Reserved <a
-                                                href="../index.php" target="_blank">Главная</a></div>
+                                                href="#" target="_blank">TMART</a></div>
                                 </div>
                             </div>
                         </div>

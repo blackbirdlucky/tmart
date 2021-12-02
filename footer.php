@@ -89,7 +89,7 @@
                         </div>
                         <ul class="footer__menu">
                             <li><a href="index.php">Главная</a></li>
-                            <li><a href="shop.php">Автомобили</a></li>
+                            <li><a href="shop.php">Каталог</a></li>
                         </ul>
                     </div>
                 </div>

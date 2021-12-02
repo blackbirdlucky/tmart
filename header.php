@@ -27,13 +27,14 @@ error_reporting(E_ERROR | E_PARSE);
 
                             <li class="drop"><a href="index.php">Главная</a> </li>
 
-                            <li class="drop"><a href="info.php">Каталог</a></li>
+                            <li class="drop"><a href="info.php">Информация</a></li>
 
-                            <li class="drop"><a href="shop.php">Автомобили</a></li>
+                            <li class="drop"><a href="shop.php">Каталог</a></li>
 
                             <li class="drop"><a>Личный кабинет</a>
                                 <ul class="dropdown">
                                     <li><a href="admin/admin.php">Админ-панель</a></li>
+                                    <li><a href="cart.php?id_user=<?php echo $_SESSION['id'] ?>">Корзина</a></li>
                                 </ul>
                             </li>
 
@@ -53,9 +54,9 @@ error_reporting(E_ERROR | E_PARSE);
 
                             <li class="drop"><a href="index.php">Главная</a> </li>
 
-                            <li class="drop"><a href="info.php">Каталог</a></li>
+                            <li class="drop"><a href="info.php">Информация</a></li>
 
-                            <li class="drop"><a href="shop.php">Автомобили</a></li>
+                            <li class="drop"><a href="shop.php">Каталог</a></li>
 
                             <li class="drop"><a>Личный кабинет</a>
                                 <ul class="dropdown">
@@ -79,9 +80,9 @@ error_reporting(E_ERROR | E_PARSE);
 
                             <li class="drop"><a href="index.php">Главная</a> </li>
 
-                            <li class="drop"><a href="info.php">Каталог</a></li>
+                            <li class="drop"><a href="info.php">Информация</a></li>
 
-                            <li class="drop"><a href="shop.php">Автомобили</a></li>
+                            <li class="drop"><a href="shop.php">Каталог</a></li>
 
                         </ul>
                     </nav>
@@ -92,7 +93,6 @@ error_reporting(E_ERROR | E_PARSE);
                 <!-- End MAinmenu Ares -->
                 <div class="col-md-2 col-sm-4 col-xs-3">
                     <ul class="menu-extra">
-                        <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
                         <li><a href="login.php"><span class="ti-user"></span></a></li>
                     </ul>
                 </div>

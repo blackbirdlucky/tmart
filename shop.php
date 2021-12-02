@@ -96,28 +96,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <div class="body__overlay"></div>
     <!-- Start Offset Wrapper -->
-    <div class="offset__wrapper">
-
-        <!-- Start Search Popap -->
-        <div class="search__area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="search__inner">
-                            <form action="#" method="get">
-                                <input placeholder="Search here... " type="text">
-                                <button type="submit"></button>
-                            </form>
-                            <div class="search__close__btn">
-                                <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Search Popap -->
-    </div>
+    <div class="offset__wrapper"></div>
     <!-- End Offset Wrapper -->
 
 
@@ -129,11 +108,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="bradcaump__inner text-center">
-                            <h2 class="bradcaump-title">Автомобили</h2>
+                            <h2 class="bradcaump-title">Каталог</h2>
                             <nav class="bradcaump-inner">
                                 <a class="breadcrumb-item" href="index.php">Главная</a>
                                 <span class="brd-separetor">/</span>
-                                <span class="breadcrumb-item active">Автомобили</span>
+                                <span class="breadcrumb-item active">Каталог</span>
                             </nav>
                         </div>
                     </div>
